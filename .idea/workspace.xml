@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d0d2170d-b164-47f9-932d-5c5a53eaad36" name="Changes" comment="Added redirect implementation on save student call.&#10;Thank you page displayed after data save">
+    <list default="true" id="d0d2170d-b164-47f9-932d-5c5a53eaad36" name="Changes" comment="Added the service layer implementation.">
       <change afterPath="$PROJECT_DIR$/src/main/java/com/resources/sm/service/StudentService.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/resources/sm/service/StudentServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -97,7 +97,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649924235158</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added the service layer implementation.">
+      <created>1649927166773</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1649927166773</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -113,7 +120,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added redirect implementation on save student call.&#10;Thank you page displayed after data save" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added redirect implementation on save student call.&#10;Thank you page displayed after data save" />
+    <MESSAGE value="Added the service layer implementation." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added the service layer implementation." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
