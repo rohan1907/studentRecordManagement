@@ -31,8 +31,8 @@ public class StudentDAOImpl implements StudentDAO {
 		Object [] sqlParams = {student.getName(),student.getMobile(),student.getCountry()};
 		String query = "INSERT INTO students (NAME, MOBILE, COUNTRY) values(?,?,?)";
 		jdbcTemplate.update(query, sqlParams);
-
 		System.out.println("Data pushed into DB");
+		return;
 	}
 
 }

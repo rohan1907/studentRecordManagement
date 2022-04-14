@@ -2,26 +2,25 @@ package com.resources.sm.controllers;
 
 import java.util.List;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.*;
 
 import com.resources.sm.DAO.StudentDAO;
 import com.resources.sm.api.Student;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class StudentController {
-	
+
 	@Autowired
-	private StudentDAO StudentDAO;
+	private StudentDAO studentDAO;
 	
 	@GetMapping("/showStudent")
 	public String showStudentList(Model model) {
 		
-		List<Student> studentList = StudentDAO.loadStudent();
-
+		List<Student> studentList = studentDAO.loadStudent();
 		model.addAttribute("students", studentList);
 		return "student-list";
 	}
@@ -33,12 +32,21 @@ public class StudentController {
 		return "add-student";
 	}
 
-	@ResponseBody
-	@GetMapping("/save-student")
+
+	@PostMapping("/save-student")
 	public String saveStudent(Student student) {
 		//code to push data to the db
-		StudentDAO.saveStudent(student);
+		studentDAO.saveStudent(student);
+		return "redirect:/thankyou";
+	}
 
-		return "Student Saved!";
+	@GetMapping("/thankyou")
+	public String thankYou(){
+		return "thankyou";
+	}
+
+	@GetMapping("/updateStudent")
+	public String updateStudent(@RequestParam("userId") int id, @ModelAttribute("student") Student student){
+		return "add-student";
 	}
 }

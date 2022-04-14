@@ -3,7 +3,7 @@ package com.resources.sm.api;
 public class Student {
 	private int id;
 	private String name;
-	private long mobile;
+	private Long mobile;
 	private String country;
 	
 	public int getId() {
@@ -18,17 +18,17 @@ public class Student {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public long getMobile() {
-		return mobile;
-	}
-	public void setMobile(long mobile) {
-		this.mobile = mobile;
-	}
 	public String getCountry() {
 		return country;
 	}
 	public void setCountry(String country) {
 		this.country = country;
+	}
+	public Long getMobile() {
+		return mobile;
+	}
+	public void setMobile(Long mobile) {
+		this.mobile = mobile;
 	}
 
 	@Override
@@ -40,6 +40,7 @@ public class Student {
 				", country='" + country + '\'' +
 				'}';
 	}
+
 
 	
 	

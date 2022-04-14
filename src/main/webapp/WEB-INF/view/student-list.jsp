@@ -10,12 +10,18 @@
 <body>
 	<h1 align="center">Student Record</h1>
 	<!-- HTML table-->
-	<table border="5" align="center" >
+	<div align="center">
+		<form action="addStudent">
+			<input type="submit" value="Add Student" />
+		</form>
+	<table border="5">
 		<tr>
 			<th>ID</th>
 			<th>Name</th>
 			<th>Mobile</th>
 			<th>Country</th>
+			<th>Update</th>
+			<th>Delete</th>
 		</tr>
 		<c:forEach items="${students}" var="student">
 			<tr>
@@ -23,9 +29,11 @@
 				<td>${student.name}</td>
 				<td>${student.mobile}</td>
 				<td>${student.country}</td>
+				<td><a href="/student-management/updateStudent?userId=${student.id}"> Update </a></td>
+				<td><a href="#"> Delete </a></td>
 			</tr>
 		</c:forEach>
 	</table>
-
+</div>
 </body>
 </html>
