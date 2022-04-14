@@ -46,7 +46,7 @@ public class StudentController {
 
 	@GetMapping("/updateStudent")
 	public String updateStudent(@RequestParam("userId") int id, @ModelAttribute("student") Student student){
-		System.out.println(id);
+		System.out.println(id+"of the student");
 		Student theStudent = studentService.getStudent(id);
 		return "add-student";
 	}
