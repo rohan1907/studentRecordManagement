@@ -18,11 +18,8 @@ public class StudentDAOImpl implements StudentDAO {
 	
 	@Override
 	public List<Student> loadStudent() {
-		
-		
 		String sql = "SELECT * FROM students";
 		List<Student> theListOfStudent = jdbcTemplate.query(sql, new StudentRowMapper());
-		
 		return theListOfStudent;
 	}
 
@@ -32,7 +29,13 @@ public class StudentDAOImpl implements StudentDAO {
 		String query = "INSERT INTO students (NAME, MOBILE, COUNTRY) values(?,?,?)";
 		jdbcTemplate.update(query, sqlParams);
 		System.out.println("Data pushed into DB");
-		return;
+	}
+
+	@Override
+	public Student getStudent(int id){
+		String sql = "SELECT * FROM STUDENTS WHERE ID = ?";
+		Student student = jdbcTemplate.queryForObject(sql, new StudentRowMapper(),id);
+		return student;
 	}
 
 }

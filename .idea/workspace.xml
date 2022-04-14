@@ -4,16 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d0d2170d-b164-47f9-932d-5c5a53eaad36" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/thankyou.jsp" afterDir="false" />
+    <list default="true" id="d0d2170d-b164-47f9-932d-5c5a53eaad36" name="Changes" comment="Added redirect implementation on save student call.&#10;Thank you page displayed after data save">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/resources/sm/service/StudentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/resources/sm/service/StudentServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/resources/sm/DAO/StudentDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/resources/sm/DAO/StudentDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/resources/sm/DAO/StudentDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/resources/sm/DAO/StudentDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/resources/sm/api/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/resources/sm/api/Student.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/resources/sm/controllers/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/resources/sm/controllers/StudentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/add-student.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/add-student.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/student-list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/student-list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,6 +90,14 @@
       <option name="presentableId" value="Default" />
       <updated>1649660873669</updated>
     </task>
+    <task id="LOCAL-00001" summary="Added redirect implementation on save student call.&#10;Thank you page displayed after data save">
+      <created>1649924235158</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1649924235158</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -105,6 +110,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added redirect implementation on save student call.&#10;Thank you page displayed after data save" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added redirect implementation on save student call.&#10;Thank you page displayed after data save" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

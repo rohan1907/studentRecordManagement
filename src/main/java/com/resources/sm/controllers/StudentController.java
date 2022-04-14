@@ -3,6 +3,7 @@ package com.resources.sm.controllers;
 import java.util.List;
 
 
+import com.resources.sm.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,12 +16,10 @@ import com.resources.sm.api.Student;
 public class StudentController {
 
 	@Autowired
-	private StudentDAO studentDAO;
-	
+	private StudentService studentService;
 	@GetMapping("/showStudent")
 	public String showStudentList(Model model) {
-		
-		List<Student> studentList = studentDAO.loadStudent();
+		List<Student> studentList = studentService.loadStudents();
 		model.addAttribute("students", studentList);
 		return "student-list";
 	}
@@ -36,7 +35,7 @@ public class StudentController {
 	@PostMapping("/save-student")
 	public String saveStudent(Student student) {
 		//code to push data to the db
-		studentDAO.saveStudent(student);
+		studentService.saveStudent(student);
 		return "redirect:/thankyou";
 	}
 
@@ -47,6 +46,8 @@ public class StudentController {
 
 	@GetMapping("/updateStudent")
 	public String updateStudent(@RequestParam("userId") int id, @ModelAttribute("student") Student student){
+		System.out.println(id);
+		Student theStudent = studentService.getStudent(id);
 		return "add-student";
 	}
 }
