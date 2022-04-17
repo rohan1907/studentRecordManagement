@@ -35,7 +35,13 @@ public class StudentController {
 	@PostMapping("/save-student")
 	public String saveStudent(Student student) {
 		//code to push data to the db
-		studentService.saveStudent(student);
+		if(student.getId() == 0){
+			studentService.saveStudent(student);
+		} else{
+			studentService.updateStudent(student);
+		}
+
+
 		return "redirect:/thankyou";
 	}
 
@@ -45,9 +51,16 @@ public class StudentController {
 	}
 
 	@GetMapping("/updateStudent")
-	public String updateStudent(@RequestParam("userId") int id, @ModelAttribute("student") Student student){
-		System.out.println(id+"of the student");
+	public String updateStudent(@RequestParam("userId") int id, Model model){
 		Student theStudent = studentService.getStudent(id);
+		model.addAttribute("student", theStudent);
 		return "add-student";
+	}
+
+	@GetMapping("/deleteStudent")
+	public String deleteStudent(@RequestParam("userId") int id, Model model){
+		studentService.deleteStudent(id);
+		System.out.println("Deleted student with id " +id);
+		return "redirect:/thankyou";
 	}
 }
