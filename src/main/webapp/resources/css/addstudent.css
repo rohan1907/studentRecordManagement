@@ -1,11 +1,40 @@
 body{
-    background-image: url("/student-management/resources/images/background.png");
+    background-image: url("/student-management/resources/images/hat.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
 }
 
-th{
-    color: white;
+h1{
+    color: red;
 }
+h3{
+    color: rgb(255, 255, 255);
+}
+
+.mybutton {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.mybutton:hover {
+    background-color: #fcf804;
+    color: black;
+}
+
+.mytable {
+    width: 50%;
+    font-family: sans-serif;
+    font-size: large;
+    font-weight: bold;
+}
+

@@ -12,28 +12,25 @@
         </head>
 
         <body>
-            <h3 align="center">Add Student</h3>
+            <h1 align="center">ADD STUDENT</h1>
             <!-- Create a spring mvc form-->
             <div align="center">
-                <form:form action="save-student" modelAttribute="student" method="POST">
+                <form:form action="save-student" modelAttribute="student" method="POST" class="mytable">
                     <form:hidden path="id" />
-                    <label for="">Name : </label>
-                    <br />
+                    <label for=""><h3>Name : </h3></label>
                     <form:input path="name" />
                     <br />
 
-                    <label for="">Mobile : </label>
-                    <br />
+                    <label for=""><h3>Mobile : </h3></label>
                     <form:input path="mobile" />
                     <br />
 
-                    <label for="">Country : </label>
-                    <br />
+                    <label for=""><h3>Country : </h3></label>
                     <form:input path="country" />
                     <br />
                     <br />
         
-                    <input type="submit" value="Submit" />
+                    <input type="submit" value="Submit" class="mybutton">
 
                 </form:form>
             </div>
