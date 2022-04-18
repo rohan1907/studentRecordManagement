@@ -1,0 +1,11 @@
+body{
+    background-image: url("/student-management/resources/images/background.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+th{
+    color: white;
+}
