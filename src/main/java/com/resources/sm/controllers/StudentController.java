@@ -36,7 +36,9 @@ public class StudentController {
 	public String saveStudent(Student student) {
 		//code to push data to the db
 		if(student.getId() == 0){
-			studentService.saveStudent(student);
+			boolean result = studentService.saveStudent(student);
+			if(result == false)
+				return "add-student";
 		} else{
 			studentService.updateStudent(student);
 		}
