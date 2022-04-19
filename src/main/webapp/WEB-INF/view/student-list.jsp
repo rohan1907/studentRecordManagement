@@ -27,7 +27,7 @@
 			<th>Update</th>
 			<th>Delete</th>
 		</tr>
-		<c:forEach items="${students}" var="student">
+		<c:forEach items="${students}" var="student">	
 			<tr>
 				<td>${student.id}</td>
 				<td>${student.name}</td>

@@ -7,7 +7,7 @@ import java.util.List;
 public interface StudentService {
     List<Student> loadStudents();
 
-    void saveStudent(Student student);
+    boolean saveStudent(Student student);
     void updateStudent(Student student);
     Student getStudent(int id);
 

@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 @Service
 public class StudentServiceImpl implements StudentService{
@@ -20,11 +22,17 @@ public class StudentServiceImpl implements StudentService{
     }
 
     @Override
-    public void saveStudent(Student student) {
-        if (student.getCountry().equalsIgnoreCase( "UK")){
-            System.out.println("Mail sent to"+student.getName());
+    public boolean saveStudent(Student student) {
+        Pattern pattern = Pattern.compile("([$&+,:;=?@#|'<>.^*()%!-])");
+        Matcher name = pattern.matcher(student.getName());
+        Matcher country = pattern.matcher(student.getCountry());
+        boolean matchFound = name.find() || country.find();
+        if(matchFound) {
+            System.out.println("Illegal characters entered");
+            return false;
         }
         studentDAO.saveStudent(student);
+        return true;
     }
 
     @Override
